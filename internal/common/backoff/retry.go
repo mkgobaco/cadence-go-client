@@ -26,7 +26,7 @@ import (
 	"sync"
 	"time"
 
-	s "go.uber.org/cadence/.gen/go/shared"
+	s "go.uber.org/cadence/gen/go/shared"
 )
 
 type (

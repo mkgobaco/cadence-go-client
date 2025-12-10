@@ -28,7 +28,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	s "go.uber.org/cadence/.gen/go/shared"
+	s "go.uber.org/cadence/gen/go/shared"
 )
 
 func TestChannelBuilderOptions(t *testing.T) {

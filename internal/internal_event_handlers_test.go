@@ -38,7 +38,7 @@ import (
 	"go.uber.org/zap/zapcore"
 	"go.uber.org/zap/zaptest/observer"
 
-	s "go.uber.org/cadence/.gen/go/shared"
+	s "go.uber.org/cadence/gen/go/shared"
 )
 
 func TestReplayAwareLogger(t *testing.T) {

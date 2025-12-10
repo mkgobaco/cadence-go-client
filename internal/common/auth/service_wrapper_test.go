@@ -29,8 +29,8 @@ import (
 	"github.com/stretchr/testify/suite"
 	"github.com/uber/tchannel-go/thrift"
 
-	"go.uber.org/cadence/.gen/go/cadence/workflowservicetest"
-	"go.uber.org/cadence/.gen/go/shared"
+	"go.uber.org/cadence/gen/go/cadence/workflowservicetest"
+	"go.uber.org/cadence/gen/go/shared"
 )
 
 type (

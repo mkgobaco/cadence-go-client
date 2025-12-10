@@ -21,7 +21,7 @@
 package isolationgroup
 
 import (
-	"go.uber.org/cadence/.gen/go/cadence/workflowserviceclient"
+	"go.uber.org/cadence/gen/go/cadence/workflowserviceclient"
 	internal "go.uber.org/cadence/internal/common/isolationgroup"
 )
 

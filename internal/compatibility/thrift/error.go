@@ -27,7 +27,7 @@ import (
 	"go.uber.org/yarpc/encoding/protobuf"
 	"go.uber.org/yarpc/yarpcerrors"
 
-	"go.uber.org/cadence/.gen/go/shared"
+	"go.uber.org/cadence/gen/go/shared"
 	"go.uber.org/cadence/internal/common"
 )
 

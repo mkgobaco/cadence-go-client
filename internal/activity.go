@@ -31,7 +31,7 @@ import (
 	"go.uber.org/zap"
 	"go.uber.org/zap/zapcore"
 
-	"go.uber.org/cadence/.gen/go/shared"
+	"go.uber.org/cadence/gen/go/shared"
 )
 
 //go:generate mockery --name ServiceInvoker --inpackage --with-expecter --case snake --filename service_invoker_mock.go

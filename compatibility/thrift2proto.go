@@ -21,7 +21,7 @@
 package compatibility
 
 import (
-	"go.uber.org/cadence/.gen/go/cadence/workflowserviceclient"
+	"go.uber.org/cadence/gen/go/cadence/workflowserviceclient"
 	internal "go.uber.org/cadence/internal/compatibility"
 
 	apiv1 "github.com/uber/cadence-idl/go/proto/api/v1"

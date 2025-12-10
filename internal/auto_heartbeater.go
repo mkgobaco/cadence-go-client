@@ -27,7 +27,7 @@ import (
 	"github.com/jonboulle/clockwork"
 	"go.uber.org/zap"
 
-	"go.uber.org/cadence/.gen/go/shared"
+	"go.uber.org/cadence/gen/go/shared"
 )
 
 func newHeartbeater(

@@ -25,7 +25,7 @@ import (
 	"reflect"
 	"strings"
 
-	s "go.uber.org/cadence/.gen/go/shared"
+	s "go.uber.org/cadence/gen/go/shared"
 )
 
 func matchReplayWithHistory(info *WorkflowInfo, replayDecisions []*s.Decision, historyEvents []*s.HistoryEvent) error {

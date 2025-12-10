@@ -29,8 +29,8 @@ import (
 	"github.com/stretchr/testify/assert"
 	"go.uber.org/yarpc"
 
-	"go.uber.org/cadence/.gen/go/cadence/workflowservicetest"
-	s "go.uber.org/cadence/.gen/go/shared"
+	"go.uber.org/cadence/gen/go/cadence/workflowservicetest"
+	s "go.uber.org/cadence/gen/go/shared"
 	"go.uber.org/cadence/internal/common"
 	"go.uber.org/cadence/internal/common/metrics"
 )

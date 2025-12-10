@@ -10,7 +10,7 @@ import (
 	restriction "go.uber.org/yarpc/api/x/restriction"
 	thrift "go.uber.org/yarpc/encoding/thrift"
 
-	workflowserviceclient "go.uber.org/cadence/.gen/go/cadence/workflowserviceclient"
+	workflowserviceclient "go.uber.org/cadence/gen/go/cadence/workflowserviceclient"
 )
 
 // Params defines the dependencies for the WorkflowService client.

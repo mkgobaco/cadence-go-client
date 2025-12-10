@@ -41,8 +41,8 @@ import (
 	"go.uber.org/zap/zaptest"
 	"golang.org/x/net/context"
 
-	"go.uber.org/cadence/.gen/go/cadence/workflowservicetest"
-	m "go.uber.org/cadence/.gen/go/shared"
+	"go.uber.org/cadence/gen/go/cadence/workflowservicetest"
+	m "go.uber.org/cadence/gen/go/shared"
 	"go.uber.org/cadence/internal"
 	"go.uber.org/cadence/internal/common"
 	"go.uber.org/cadence/worker"

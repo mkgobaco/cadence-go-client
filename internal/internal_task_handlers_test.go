@@ -43,8 +43,8 @@ import (
 	"go.uber.org/zap/zapcore"
 	"go.uber.org/zap/zaptest/observer"
 
-	"go.uber.org/cadence/.gen/go/cadence/workflowservicetest"
-	s "go.uber.org/cadence/.gen/go/shared"
+	"go.uber.org/cadence/gen/go/cadence/workflowservicetest"
+	s "go.uber.org/cadence/gen/go/shared"
 	"go.uber.org/cadence/internal/common"
 )
 

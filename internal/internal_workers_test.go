@@ -37,8 +37,8 @@ import (
 	"go.uber.org/yarpc"
 	"go.uber.org/zap"
 
-	"go.uber.org/cadence/.gen/go/cadence/workflowservicetest"
-	m "go.uber.org/cadence/.gen/go/shared"
+	"go.uber.org/cadence/gen/go/cadence/workflowservicetest"
+	m "go.uber.org/cadence/gen/go/shared"
 	"go.uber.org/cadence/internal/common"
 )
 

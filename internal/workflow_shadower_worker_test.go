@@ -31,10 +31,10 @@ import (
 	"github.com/stretchr/testify/suite"
 	"go.uber.org/yarpc"
 
-	"go.uber.org/cadence/.gen/go/cadence/workflowserviceclient"
-	"go.uber.org/cadence/.gen/go/cadence/workflowservicetest"
-	"go.uber.org/cadence/.gen/go/shadower"
-	"go.uber.org/cadence/.gen/go/shared"
+	"go.uber.org/cadence/gen/go/cadence/workflowserviceclient"
+	"go.uber.org/cadence/gen/go/cadence/workflowservicetest"
+	"go.uber.org/cadence/gen/go/shadower"
+	"go.uber.org/cadence/gen/go/shared"
 	"go.uber.org/cadence/internal/common"
 )
 

@@ -23,7 +23,7 @@ package common
 import (
 	"testing"
 
-	s "go.uber.org/cadence/.gen/go/shared"
+	s "go.uber.org/cadence/gen/go/shared"
 
 	"github.com/stretchr/testify/assert"
 )

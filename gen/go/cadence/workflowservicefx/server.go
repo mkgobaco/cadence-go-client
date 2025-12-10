@@ -8,7 +8,7 @@ import (
 	transport "go.uber.org/yarpc/api/transport"
 	thrift "go.uber.org/yarpc/encoding/thrift"
 
-	workflowserviceserver "go.uber.org/cadence/.gen/go/cadence/workflowserviceserver"
+	workflowserviceserver "go.uber.org/cadence/gen/go/cadence/workflowserviceserver"
 )
 
 // ServerParams defines the dependencies for the WorkflowService server.

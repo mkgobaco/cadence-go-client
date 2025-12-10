@@ -40,8 +40,8 @@ import (
 	"go.uber.org/zap/zaptest"
 
 	"go.uber.org/cadence"
-	"go.uber.org/cadence/.gen/go/shared"
 	"go.uber.org/cadence/client"
+	"go.uber.org/cadence/gen/go/shared"
 	"go.uber.org/cadence/interceptors"
 	"go.uber.org/cadence/internal"
 	"go.uber.org/cadence/worker"

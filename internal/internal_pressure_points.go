@@ -29,7 +29,7 @@ import (
 
 	"go.uber.org/zap"
 
-	"go.uber.org/cadence/.gen/go/cadence/workflowserviceclient"
+	"go.uber.org/cadence/gen/go/cadence/workflowserviceclient"
 )
 
 // ** This is for internal stress testing framework **

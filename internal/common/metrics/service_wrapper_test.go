@@ -30,7 +30,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"go.uber.org/cadence/.gen/go/cadence/workflowservicetest"
+	"go.uber.org/cadence/gen/go/cadence/workflowservicetest"
 
 	"github.com/golang/mock/gomock"
 	"github.com/stretchr/testify/require"
@@ -38,8 +38,8 @@ import (
 	"github.com/uber/tchannel-go/thrift"
 	"go.uber.org/yarpc"
 
-	"go.uber.org/cadence/.gen/go/cadence/workflowserviceclient"
-	s "go.uber.org/cadence/.gen/go/shared"
+	"go.uber.org/cadence/gen/go/cadence/workflowserviceclient"
+	s "go.uber.org/cadence/gen/go/shared"
 )
 
 var (

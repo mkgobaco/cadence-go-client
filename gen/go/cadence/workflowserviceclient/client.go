@@ -12,8 +12,8 @@ import (
 	transport "go.uber.org/yarpc/api/transport"
 	thrift "go.uber.org/yarpc/encoding/thrift"
 
-	cadence "go.uber.org/cadence/.gen/go/cadence"
-	shared "go.uber.org/cadence/.gen/go/shared"
+	cadence "go.uber.org/cadence/gen/go/cadence"
+	shared "go.uber.org/cadence/gen/go/shared"
 )
 
 // Interface is a client for the WorkflowService service.

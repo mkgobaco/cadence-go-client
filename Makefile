@@ -117,7 +117,7 @@ FRESH_ALL_SRC = $(shell \
 # if you require a fully up-to-date list, e.g. for shell commands, use FRESH_ALL_SRC instead.
 ALL_SRC := $(FRESH_ALL_SRC)
 # as lint ignores generated code, it can use the cached copy in all cases.
-LINT_SRC := $(filter-out %_test.go ./.gen/% ./mock% ./tools.go ./internal/compatibility/%, $(ALL_SRC))
+LINT_SRC := $(filter-out %_test.go ./gen/% ./mock% ./tools.go ./internal/compatibility/%, $(ALL_SRC))
 
 # ====================================
 # $(BIN) targets
@@ -229,8 +229,8 @@ $(THRIFT_GEN): $(THRIFT_FILES) $(BIN)/thriftrw $(BIN)/thriftrw-plugin-yarpc
 	$Q echo 'thriftrw for $(subst $(BUILD),idls/thrift,$@)...'
 	$Q $(BIN_PATH) $(BIN)/thriftrw \
 		--plugin=yarpc \
-		--pkg-prefix=$(PROJECT_ROOT)/.gen/go \
-		--out=.gen/go \
+		--pkg-prefix=$(PROJECT_ROOT)/gen/go \
+		--out=gen/go \
 		$(subst $(BUILD),idls/thrift,$@)
 	$Q touch $@
 
@@ -248,7 +248,7 @@ $(BUILD)/generate: $(shell grep --files-with-matches -E '^//go:generate' $(ALL_S
 # note that LINT_SRC is fairly fake as a prerequisite.
 # it's a coarse "you probably don't need to re-lint" filter, nothing more.
 $(BUILD)/lint: $(LINT_SRC) $(BIN)/revive | $(BUILD)
-	$Q $(BIN)/revive -config revive.toml -exclude './vendor/...' -exclude './.gen/...' -formatter stylish ./...
+	$Q $(BIN)/revive -config revive.toml -exclude './vendor/...' -exclude './gen/...' -formatter stylish ./...
 	$Q touch $@
 
 
@@ -323,7 +323,7 @@ all: $(BUILD)/lint ## refresh codegen, lint, and ensure everything builds, whate
 .PHONY: clean
 clean:
 	$Q # intentionally not using $(BUILD) as that covers only a single version
-	rm -Rf .build .gen
+	rm -Rf .build gen
 	$Q # remove old things (no longer in use).  this can be removed "eventually", when we feel like they're unlikely to exist.
 	rm -Rf .bin
 
@@ -406,10 +406,10 @@ integ_test_grpc: $(BUILD)/fmt
 # running this target requires coverage files to have already been created, e.g. run ^ the above by hand, which happens in ci.
 $(COVER_ROOT)/cover.out: $(UT_COVER_FILE) $(INTEG_STICKY_OFF_COVER_FILE) $(INTEG_STICKY_ON_COVER_FILE) $(INTEG_GRPC_COVER_FILE)
 	$Q echo "mode: atomic" > $(COVER_ROOT)/cover.out
-	cat $(UT_COVER_FILE) | grep -v "mode: atomic" | grep -v ".gen" >> $(COVER_ROOT)/cover.out
-	cat $(INTEG_STICKY_OFF_COVER_FILE) | grep -v "mode: atomic" | grep -v ".gen" >> $(COVER_ROOT)/cover.out
-	cat $(INTEG_STICKY_ON_COVER_FILE) | grep -v "mode: atomic" | grep -v ".gen" >> $(COVER_ROOT)/cover.out
-	cat $(INTEG_GRPC_COVER_FILE) | grep -v "mode: atomic" | grep -v ".gen" >> $(COVER_ROOT)/cover.out
+	cat $(UT_COVER_FILE) | grep -v "mode: atomic" | grep -v "gen" >> $(COVER_ROOT)/cover.out
+	cat $(INTEG_STICKY_OFF_COVER_FILE) | grep -v "mode: atomic" | grep -v "gen" >> $(COVER_ROOT)/cover.out
+	cat $(INTEG_STICKY_ON_COVER_FILE) | grep -v "mode: atomic" | grep -v "gen" >> $(COVER_ROOT)/cover.out
+	cat $(INTEG_GRPC_COVER_FILE) | grep -v "mode: atomic" | grep -v "gen" >> $(COVER_ROOT)/cover.out
 
 coverage_report: $(COVER_ROOT)/cover.out
 	cp $< $@

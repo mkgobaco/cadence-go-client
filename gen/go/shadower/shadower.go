@@ -17,7 +17,7 @@ import (
 	wire "go.uber.org/thriftrw/wire"
 	zapcore "go.uber.org/zap/zapcore"
 
-	shared "go.uber.org/cadence/.gen/go/shared"
+	shared "go.uber.org/cadence/gen/go/shared"
 )
 
 const ErrNonRetryableType string = "com.uber.cadence.internal.shadowing.NonRetryableException"
@@ -2139,7 +2139,7 @@ func (v *WorkflowResult) IsSetFailed() bool {
 // ThriftModule represents the IDL file used to generate this package.
 var ThriftModule = &thriftreflect.ThriftModule{
 	Name:     "shadower",
-	Package:  "go.uber.org/cadence/.gen/go/shadower",
+	Package:  "go.uber.org/cadence/gen/go/shadower",
 	FilePath: "shadower.thrift",
 	SHA1:     "f29a425548641e51e02ec1978279c1e37b9df792",
 	Includes: []*thriftreflect.ThriftModule{

@@ -24,7 +24,7 @@ import (
 	"context"
 	"testing"
 
-	"go.uber.org/cadence/.gen/go/shared"
+	"go.uber.org/cadence/gen/go/shared"
 
 	"github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/require"

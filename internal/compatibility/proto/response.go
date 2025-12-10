@@ -21,7 +21,7 @@
 package proto
 
 import (
-	"go.uber.org/cadence/.gen/go/shared"
+	"go.uber.org/cadence/gen/go/shared"
 
 	apiv1 "github.com/uber/cadence-idl/go/proto/api/v1"
 )
